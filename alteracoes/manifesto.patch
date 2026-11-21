@@ -1,0 +1,15 @@
+--- original/AndroidManifest.xml
++++ experimental/AndroidManifest.xml
+@@ -1,10 +1,10 @@
+-<?xml version="1.0" encoding="utf-8"?>
++<?xml version='1.0' encoding='utf-8'?>
+ <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="32" android:compileSdkVersionCodename="12" android:installLocation="auto" package="selfcustody.github.io.krux" platformBuildVersionCode="32" platformBuildVersionName="12">
+     <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:xlargeScreens="true"/>
+     <uses-feature android:glEsVersion="0x20000"/>
+     <uses-permission android:name="android.permission.CAMERA"/>
+     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+-    <application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="true" android:hardwareAccelerated="true" android:icon="@mipmap/icon" android:label="@string/app_name" android:theme="@android:style/Theme.NoTitleBar">
++    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="true" android:hardwareAccelerated="true" android:icon="@mipmap/icon" android:label="@string/app_name" android:theme="@android:style/Theme.NoTitleBar" android:fullBackupContent="false" android:dataExtractionRules="@xml/auditoria_exclusao_backup">
+         <meta-data android:name="wakelock" android:value="0"/>
+         <activity android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|density|layoutDirection|fontScale" android:exported="true" android:label="@string/app_name" android:launchMode="singleTask" android:name="org.kivy.android.PythonActivity" android:screenOrientation="portrait">
+             <intent-filter>
